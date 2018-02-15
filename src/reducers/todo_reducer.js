@@ -8,8 +8,7 @@ const DEFAULT_STATE = {
 export default function(state = DEFAULT_STATE, action){
     switch(action.type){
         case types.GET_ALL_TODOS:
-            console.log('Get All Todos:', action.payload);
-            return state;
+            return {...state, all: action.payload.data.todos};
         default:
             return state;
     }
